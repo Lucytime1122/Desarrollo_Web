@@ -1,0 +1,67 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://static.nationalgeographic.es/files/styles/image_3200/public/75552.ngsversion.1422285553360.webp?w=900&h=600');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: left;
+}
+
+header {
+    background-color: #0c0911;
+    color: white;
+    padding: 15px;
+    text-align: right;
+    font-size: 1em;
+    box-shadow: 0px 4px 6px rgba(55, 30, 30, 0.1);
+}
+
+.menu {
+    list-style-type: none;
+    padding: 10px;
+    text-align: right;
+    background: #211f25;
+    margin: 0;
+}
+
+.menu li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.menu a {
+    color: #58f0f3;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 3;
+    padding: 250px;
+    text-align: justify;
+    font-size: 20px;
+    display: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: #100d14;
+    color: rgb(154, 227, 245);
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.2em;
+    box-shadow: 0px -4px 6px rgba(61, 60, 60, 0.1);
+}
