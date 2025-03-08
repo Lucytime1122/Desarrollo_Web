@@ -4,11 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insertar footer</title>
+    <title>Navegación Dinámica</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header>
+        <nav>
+            <ul class="menu" id="menu">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Acerca de</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <button onclick="addMenuItem()">Agregar Item</button>
+        </nav>
+    </header>
+    <main>
+        <h1>Bienvenido a Mi Sitio Web</h1>
+        <p>Este es un ejemplo de navegación dinámica utilizando HTML, CSS y JavaScript.</p>
+    </main>
 
+    <footer id="footer"></footer>
+
+    <script src="navar.js"></script>
+    <script src="footer.js"></script>
+</body>
+
+</html>
 </body>
 
 </html>
