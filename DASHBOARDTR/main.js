@@ -23,8 +23,8 @@ async function obtenerDatos() {
         const response = await fetch(url);
         const data = await response.json();
 
-        const humedad = data.main.humidity || 0;
-        const nubosidad = data.clouds.all || 0;
+        const humedad = data.main.humidity;
+        const nubosidad = data.clouds.all;
         const lluvia = data.rain ? data.rain["1h"] : 0;
 
         document.getElementById("paisSeleccionado").textContent = `🌍 Clima en ${ciudadAleatoria.nombre}, ${ciudadAleatoria.pais}`;
@@ -41,36 +41,21 @@ function actualizarGrafico(humedad, nubosidad, lluvia) {
 
     if (chart) chart.destroy();
 
-    const total = humedad + nubosidad + lluvia;
-    const humedadPorcentaje = (humedad / total) * 100;
-    const nubosidadPorcentaje = (nubosidad / total) * 100;
-    const lluviaPorcentaje = (lluvia / total) * 100;
-
     chart = new Chart(ctx, {
         type: "pie",
         data: {
-            labels: ["Humedad", "Nubosidad", "Lluvia"],
+            labels: ["Humedad", "Nubes", "Lluvia"],
             datasets: [{
-                data: [humedadPorcentaje, nubosidadPorcentaje, lluviaPorcentaje],
+                data: [humedad, nubosidad, lluvia],
                 backgroundColor: ["#3498db", "#95a5a6", "#0A1C3A"],
                 borderColor: "#222",
-                borderWidth: 2,
                 hoverOffset: 15
             }]
         },
         options: {
             plugins: {
-                legend: {
-                    labels: {
-                        color: "white",
-                        font: { size: 16 }
-                    }
-                },
-                datalabels: {
-                    color: "black",
-                    font: { weight: "bold", size: 18 },
-                    formatter: (value) => `${value.toFixed(1)}%`
-                }
+                legend: { labels: { color: "white", font: { size: 16 } } },
+                datalabels: { color: "black", font: { weight: "bold", size: 18 }, formatter: (value) => `${value}%` }
             }
         },
         plugins: [ChartDataLabels]

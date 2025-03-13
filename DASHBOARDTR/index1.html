@@ -4,24 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temperatura en Tiempo Real</title>
+    <title>Temperatura min/max</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <nav id="navbar"></nav>
     <div class="container">
-        <h1>Temperatura</h1>
-        <p id="paisSeleccionado"></p>
-        <canvas id="weatherChart"></canvas>
+        <h1>Temperatura mínima y máxima</h1>
+        <p id="paisSeleccionadoLluvia"></p>
+        <canvas id="rainChart"></canvas>
     </div>
     <footer>
         <p>Datos obtenidos de OpenWeather API | Proyecto desarrollado por <strong>Lucia Hernandez</strong></p>
     </footer>
-    <script src="main.js"></script>
     <script src="navbar.js"></script>
+    <script src="main2.js"></script>
 </body>
 
 </html>

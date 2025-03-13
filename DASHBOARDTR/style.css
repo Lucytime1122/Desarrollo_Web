@@ -1,18 +1,18 @@
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: white;
     text-align: center;
-    background-color: #010f3a;
-    color: #aceae5;
     padding: 20px;
 }
 
 .container {
-    background: rgba(7, 57, 101, 0.9);
+    background: rgba(7, 57, 101, 0.7);
     padding: 20px;
     border-radius: 15px;
     max-width: 500px;
     margin: auto;
-    box-shadow: 0px 5px 15px rgba(39, 8, 142, 0.7);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 canvas {
@@ -21,9 +21,9 @@ canvas {
 }
 
 h1 {
-    font-size: 28px;
+    font-size: 26px;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 5px rgba(9, 3, 47, 0.8);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 p {
@@ -31,12 +31,27 @@ p {
     font-weight: bold;
 }
 
-footer {
-    background-color: #020116;
-    color: #2b9198;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 12px;
-    margin-top: 20px;
-    border-top: 2px solid #0e1464;
+.nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: #333;
+    margin-bottom: 20px;
+}
+
+.nav li {
+    margin: 0 15px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav a:hover {
+    background: #555;
+    border-radius: 5px;
 }
