@@ -23,8 +23,8 @@ async function obtenerDatos() {
         const response = await fetch(url);
         const data = await response.json();
 
-        const humedad = data.main.humidity;
-        const nubosidad = data.clouds.all;
+        const humedad = data.main.humidity || 0;
+        const nubosidad = data.clouds.all || 0;
         const lluvia = data.rain ? data.rain["1h"] : 0;
 
         document.getElementById("paisSeleccionado").textContent = `🌍 Clima en ${ciudadAleatoria.nombre}, ${ciudadAleatoria.pais}`;
@@ -41,19 +41,21 @@ function actualizarGrafico(humedad, nubosidad, lluvia) {
 
     if (chart) chart.destroy();
 
+    const total = humedad + nubosidad + lluvia;
+    const humedadPorcentaje = (humedad / total) * 100;
+    const nubosidadPorcentaje = (nubosidad / total) * 100;
+    const lluviaPorcentaje = (lluvia / total) * 100;
+
     chart = new Chart(ctx, {
         type: "pie",
         data: {
             labels: ["Humedad", "Nubosidad", "Lluvia"],
             datasets: [{
-                data: [humedad, nubosidad, lluvia],
-                backgroundColor: ["#3498db", "#95a5a6", "#2ecc71"],
+                data: [humedadPorcentaje, nubosidadPorcentaje, lluviaPorcentaje],
+                backgroundColor: ["#3498db", "#95a5a6", "#0A1C3A"],
                 borderColor: "#222",
-                hoverOffset: 15,
-                shadowOffsetX: 5,
-                shadowOffsetY: 5,
-                shadowBlur: 10,
-                shadowColor: "rgba(0, 0, 0, 0.5)"
+                borderWidth: 2,
+                hoverOffset: 15
             }]
         },
         options: {
@@ -67,7 +69,7 @@ function actualizarGrafico(humedad, nubosidad, lluvia) {
                 datalabels: {
                     color: "black",
                     font: { weight: "bold", size: 18 },
-                    formatter: (value, ctx) => `${value}%`
+                    formatter: (value) => `${value.toFixed(1)}%`
                 }
             }
         },

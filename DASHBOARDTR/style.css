@@ -1,23 +1,18 @@
 body {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
-    background-image: url('https://www.lifeder.com/wp-content/uploads/2021/10/clima-tipos-1016x420.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    color: rgba(199, 198, 198, 0.347);
-    /* Mejor contraste para el texto */
-    padding: 50px;
+    background-color: #010f3a;
+    color: #aceae5;
+    padding: 20px;
 }
 
 .container {
-    background: rgba(196, 198, 200, 0.8);
-    /* Mayor opacidad para mejor legibilidad */
+    background: rgba(7, 57, 101, 0.9);
     padding: 20px;
     border-radius: 15px;
     max-width: 500px;
     margin: auto;
-    box-shadow: 0px 5px 15px rgba(231, 228, 228, 0.5);
+    box-shadow: 0px 5px 15px rgba(39, 8, 142, 0.7);
 }
 
 canvas {
@@ -28,7 +23,7 @@ canvas {
 h1 {
     font-size: 28px;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 5px rgba(9, 3, 47, 0.8);
 }
 
 p {
@@ -36,14 +31,12 @@ p {
     font-weight: bold;
 }
 
-/* 🔻 Diseño mejorado del footer */
 footer {
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #ffffff;
+    background-color: #020116;
+    color: #2b9198;
     text-align: center;
-    padding: 15px 0;
+    padding: 10px 0;
     font-size: 12px;
     margin-top: 20px;
-    border-top: 2px solid #9f7b7b;
-    /* Línea blanca para separar */
+    border-top: 2px solid #0e1464;
 }
