@@ -17,7 +17,7 @@ let nombre2 = prompt("¿Cómo te llamas?");
 alert("Bienvenida(o)  " + nombre2)
 
 // Función para realizar operaciones
-/*function calculadora() {
+function calculadora() {
     let operacion = prompt("¿Qué operación deseas realizar? (suma, resta, multiplicación, división)");
     let num1 = parseFloat(prompt("Ingresa el primer número:"));
     let num2 = parseFloat(prompt("Ingresa el segundo número:"));
@@ -50,8 +50,8 @@ alert("Bienvenida(o)  " + nombre2)
 }
 
 // Llamar a la función de la calculadora
-calculadora(); 
-
+calculadora();
+/*
 let num = prompt("ingresa tu calificacion")
 if (num>= 90){
 alert ("ya pasaste facil")
