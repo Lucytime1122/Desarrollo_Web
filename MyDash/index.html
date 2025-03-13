@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   
+   <title>Document</title>
+</head>
+<body>
+   <nav>
+
+   </nav>
+   <div class="contenido">
+      <div class="weather-data">
+         <form id="cityForm" action="">
+            <label>Elije la ciudad dónde desees ver el clima</label>
+            <input type="text" id="input">
+            <button id="button">Enviar</button>
+         </form>
+         <h2 id="nombre-ciudad">Ciudad</h2>
+         <!-- 
+            La clase detalla un conjunto, para varios
+            El id es único, solo para un elemento
+            El concepto es el mismo, lo que cambia es el uso
+         -->
+         <p id="temperatura">Temperatura</p>
+         <p id="humedad">Humedad</p>
+         <p id="descripción">Descripción</p>
+      </div>
+   </div>
+
+   <div class="weather-chart">
+      <div class="graficos der">
+         <canvas id="line">
+
+         </canvas>
+      </div>
+      <div class="graficos izq">
+         <canvas id="pie">
+
+         </canvas>
+      </div>
+   </div>
+
+
+   <footer>
+
+   </footer>
+   <script src="/utils/script.js"></script>
+</body>
+</html>
