@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dashboard del Clima</title>
    <link rel="stylesheet" href="css/style.css">
-   
-   <title>Document</title>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
    <nav>
-
+      <h1>Dashboard del Clima</h1>
    </nav>
    <div class="contenido">
-      <div class="weather-data">
-         <form id="cityForm" action="">
-            <label>Elije la ciudad dónde desees ver el clima</label>
-            <input type="text" id="input">
-            <button id="button">Enviar</button>
-         </form>
-         <h2 id="nombre-ciudad">Ciudad</h2>
-         <!-- 
-            La clase detalla un conjunto, para varios
-            El id es único, solo para un elemento
-            El concepto es el mismo, lo que cambia es el uso
-         -->
-         <p id="temperatura">Temperatura</p>
-         <p id="humedad">Humedad</p>
-         <p id="descripción">Descripción</p>
-      </div>
-   </div>
+      <div class="weather-wrapper">
+         <div class="weather-data">
 
-   <div class="weather-chart">
-      <div class="graficos der">
-         <canvas id="line">
+            <form id="cityForm" action="">
+               <div>
+                  <label>Elije la ciudad dónde desees ver el clima</label>
+                  <input type="text" id="input">
+                  <button id="button">Cambiar texto</button>
+               </div>
+            </form>
 
-         </canvas>
+            <h2 id="city-name">Ciudad: </h2>
+            <p id="temperature">Temperatura: </p>
+            <p id="humidity">Humedad: </p>
+            <p id="weather-description">Descripción: </p>
+         </div>
       </div>
-      <div class="graficos izq">
-         <canvas id="pie">
 
-         </canvas>
+      <div class="charts-wrapper">
+
+         <div class="chart-container der">
+            <canvas id="lineChart"></canvas>
+         </div>
+         <div class="chart-container izq">
+            <canvas id="pieChart"></canvas>
+         </div>
+
       </div>
+
    </div>
 
 
    <footer>
-
+      <p>2023 Dashboard del Clima @ Lucia</p>
    </footer>
-   <script src="/utils/script.js"></script>
+
+   <script src="utils/script.js"></script>
 </body>
+
 </html>

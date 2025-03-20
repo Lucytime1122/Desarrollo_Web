@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.content {
+    padding: 20px;
+}
+
+.weather-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.weather-data {
+    margin-bottom: 20px;
+}
+
+.charts-wrapper {
+    display: flex;
+    /* Activa Flexbox */
+    justify-content: space-between;
+    /* Separa los elementos */
+    gap: 20px;
+    /* Espacio entre las gráficas */
+    max-width: 1200px;
+    /* Ajusta el ancho máximo */
+    margin: 0 auto;
+    /* Centra el contenedor */
+}
+
+.chart-container {
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.der {
+    margin-right: 10px;
+    /* Espacio a la derecha de la primera gráfica */
+}
+
+.izq {
+    margin-left: 10px;
+    /* Espacio a la izquierda de la segunda gráfica */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
